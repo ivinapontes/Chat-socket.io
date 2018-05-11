@@ -3,8 +3,8 @@ var socket = require('socket.io');
 
 // App setup
 var app = express();
-var server = app.listen('https://chat-ivi.herokuapp.com/', function() {
-    console.log('listening to request on port 4000');
+var server = app.listen(process.env.PORT || 3000, () => {
+  console.log("Listening...");
 });
 
 
